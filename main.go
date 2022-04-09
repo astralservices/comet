@@ -19,7 +19,7 @@ func main() {
 		log.Fatalf("Some error occured while loading .env file %s", err)
 	}
 
-	flag.StringVar(&dir, "dir", os.Getenv("COMET_ROOT./"), "the directory to serve files from. Defaults to the current dir")
+	flag.StringVar(&dir, "dir", os.Getenv("COMET_ROOT"), "the directory to serve files from. Defaults to the current dir")
 	flag.Parse()
 	r := mux.NewRouter()
 
